@@ -1,4 +1,5 @@
-Troubleshooting / Fix
+# Troubleshooting / Fix
+
 ✔ Restore Original DNS:
 sudo mv /etc/resolv.conf.bak /etc/resolv.conf
 ✔ Restart Network Services (optional):
