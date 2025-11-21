@@ -1,4 +1,28 @@
-# 🧪 LAB: Simulate & Troubleshoot “UDP Port 53 Unreachable”
+# 🧪 LAB Steps
+## Step 1 — Test if DNS Works
+**dig google.com**- If it returns an IP, DNS is fine.
+
+## Step 2 — Break DNS (Simulate Client Issue)
+Backup the DNS configuration:
+**sudo cp /etc/resolv.conf /etc/resolv.conf.bak**
+Replace with a fake DNS server:
+**echo "nameserver 192.168.1.250" | sudo tee /etc/resolv.conf**
+
+## Step 3 — Verify DNS Is Broken
+**dig google.com**
+Expected:
+**connection timed out; no servers could be reached**
+
+## Step 4 — Start Packet Capture
+sudo tcpdump -i any -nn udp port 53 -vv -w outputs/udp53_issue.pcap
+
+Step 5 — Trigger DNS Request
+dig google.com
+
+Stop tcpdump:
+Ctrl + C
+
+
 
 👉 Send a DNS query to a dead IP on your LAN.
 
