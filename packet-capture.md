@@ -1,4 +1,4 @@
-Packet Capture Explanation
+# Packet Capture Explanation
 
 During the capture, you will see:
 
