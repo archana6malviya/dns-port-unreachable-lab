@@ -20,21 +20,44 @@ Analyze ICMP "Port Unreachable" packets
 
 Troubleshoot networking issues like a SOC Analyst
 
-🛠 Tools Used
+🧰 Tools Used
 
 Linux (Ubuntu recommended)
 
 tcpdump
 
-systemd-resolved / NetworkManager
-
-dig / nslookup
+dig / ping
 
 Wireshark (optional)
 
-## ⚡ Lab Summary
+ICMP analysis
 
-Your browser (or the `dig` command) sends a DNS query:
+🧪 What You Will Learn
+
+How DNS works over UDP port 53
+
+How to break DNS intentionally for analysis
+
+How to capture packet data
+
+How to identify ICMP "Port Unreachable" errors
+
+How to write a basic incident report
+
+Practical SOC troubleshooting workflow
+📚 Files Included
+
+lab-steps.md — beginner-friendly hands-on steps
+
+packet-capture.md — how to collect .pcap
+
+packet-analysis.md — analyze DNS failure
+
+incident-report.md — SOC-style documentation
+
+troubleshooting.md — how to fix the issue
+
+commands.sh — automation script
 
 ## 📂 Project Contents
 
