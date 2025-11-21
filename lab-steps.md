@@ -16,10 +16,10 @@ Expected:
 ## Step 4 — Start Packet Capture
 sudo tcpdump -i any -nn udp port 53 -vv -w outputs/udp53_issue.pcap
 
-Step 5 — Trigger DNS Request
+## Step 5 — Trigger DNS Request
 dig google.com
 
-Stop tcpdump:
+## Stop tcpdump:
 Ctrl + C
 
 
