@@ -5,24 +5,20 @@ This project reproduces a real-world scenario where DNS queries fail with the er
 **ICMP – Destination Port Unreachable**  
 **udp port 53 unreachable**
 
-You will capture packets using tcpdump, analyze failures, and identify why UDP port 53 becomes unreachable.
-
-This happens when a system sends a DNS request (UDP 53), but the destination DNS server (or port) is not available.
-
 ## 🔥 Learning Objectives
 
-Understand DNS over UDP (Port 53)
+1. Understand DNS over UDP (Port 53)
 
-Capture DNS traffic
+2. Capture DNS traffic
 
-Trigger DNS failures intentionally
+3. Trigger DNS failures intentionally
 
-Analyze ICMP "Port Unreachable" packets
+4. Analyze ICMP "Port Unreachable" packets
 
-Troubleshoot networking issues like a SOC Analyst
+5. Write a basic incident report
 
 ## 🧰 Tools Used
-Linux (Ubuntu recommended)
+Linux (Ubuntu)
 
 tcpdump
 
@@ -31,20 +27,6 @@ dig / ping
 Wireshark (optional)
 
 ICMP analysis
-
-## 🧪 What You Will Learn
-
-How DNS works over UDP port 53
-
-How to break DNS intentionally for analysis
-
-How to capture packet data
-
-How to identify ICMP "Port Unreachable" errors
-
-How to write a basic incident report
-
-Practical SOC troubleshooting workflow
 
 ## 📚 Files Included
 
