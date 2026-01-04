@@ -1,9 +1,19 @@
-# 🧪 DNS "Destination Port Unreachable" Simulation Lab
+# 🧪 DNS Port Unreachable Analysis – ICMP Destination Unreachable Lab
 
-This project reproduces a real-world scenario where DNS queries fail with the error:
 
-**ICMP – Destination Port Unreachable**  
-**udp port 53 unreachable**
+## 🎯 Objective
+To simulate DNS traffic to a closed UDP port and analyze ICMP "Destination Port Unreachable"
+messages using tcpdump and Wireshark, mimicking real-world SOC network troubleshooting.
+
+## 🛠 Skills Demonstrated
+- DNS protocol analysis (UDP/53)
+- ICMP Destination Unreachable investigation
+- Network packet capture using tcpdump
+- Packet analysis using Wireshark
+- Linux command-line troubleshooting
+- Incident reporting (SOC methodology)
+
+
 
 ## 🔥 Learning Objectives
 
@@ -18,15 +28,20 @@ This project reproduces a real-world scenario where DNS queries fail with the er
 5. Write a basic incident report
 
 ## 🧰 Tools Used
-Linux (Ubuntu)
+- Linux (Ubuntu)
+- tcpdump
+- Wireshark
+- dig / nslookup
 
-tcpdump
+## ⚡ Quick Start
 
-dig / ping
+1. Run DNS query to a closed port
+   dig @<target-ip> example.com
 
-Wireshark (optional)
+2. Capture packets
+   sudo tcpdump -nn -i eth0 icmp or udp port 53
 
-ICMP analysis
+3. Analyze ICMP Port Unreachable response in Wireshark
 
 ## 📚 Files Included
 
@@ -53,7 +68,14 @@ commands.sh — automation script
 | `tcpdump-output-example.txt` | Sample output for reference |
 | `/screenshots/` | Add your tcpdump screenshots |
 
+## 🧠 SOC Relevance
+ICMP Destination Unreachable alerts are common in:
+- Firewall misconfigurations
+- Network scanning activity
+- DNS service outages
+
+This lab trains analysts to distinguish misconfiguration from malicious behavior.
 
 
-Perfect for practising packet analysis, network debugging, and incident replication.
+
 
