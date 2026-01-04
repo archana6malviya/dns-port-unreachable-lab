@@ -24,5 +24,5 @@ None — internal misconfiguration.
 ## Detection:
 tcpdump packet capture and DNS request testing.
 
-## Resolution:
+## Recommendations:
 Restored original DNS configuration.
